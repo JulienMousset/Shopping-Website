@@ -6,8 +6,15 @@
                 <div class="row">
                 <div v-for="product in APIData" :key="product.id" class="col-md-4">
                     <div class="card mb-4 box-shadow">
+                    <!--
+                    <img class="card-img-top" src="">{{product.image}}
+                    <img :src="'/ressources/images/'+product.image">
                     <img class="card-img-top" v-bind:src="product.image" alt="Card image cap">
-                    <!--<img class="card-img-top" src="https://via.placeholder.com/150x100" alt="Card image cap">-->
+                    <img :src="product.image" />
+                    <img :src="'lbj.jpeg'" :alt='product.name'>
+                    <span>{{ product.image }}</span>
+                    <img v-bind:src="product.image">-->
+                    <div><img class="card-img-top" :src="getImgUrl(product.image)" v-bind:alt="product.image"></div>
                     <div class="card-body">
                         <h4 class=""><a class="text-secondary" href="">{{product.name}}</a></h4>
                         <p class="card-text">{{product.price}}</p>
@@ -31,6 +38,18 @@
     import { getAPI } from '../axios-api'
     import Navbar from '../components/Navbar'
     export default {
+        methods: {
+            getImgUrl(imgName) {
+                return require('.' + imgName)
+            }
+        },
+        data1 () {
+            return {
+                object: {
+                    image: 'image.png'
+                }
+            }
+        },
         name: 'Product',
         data () {
             return {
