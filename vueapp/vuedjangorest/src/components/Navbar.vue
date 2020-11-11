@@ -5,7 +5,6 @@
         <a class="navbar-brand">
         <img src="../assets/logo.jpg" width="" height="50" class="d-inline-block align-top" alt="" loading="lazy">
         </a>
-        <router-link to="/cart">Cart</router-link>
         <font-awesome-icon icon="shopping-cart" />
       </div>
     </nav>

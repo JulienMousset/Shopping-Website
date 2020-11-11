@@ -6,8 +6,7 @@ from PIL import Image
 class Product(models.Model):
     name = models.CharField(max_length=255)
     price = models.CharField(max_length=10)
-    ##quantity = models.PositiveIntegerField(default=0)
-    quantity = models.PositiveIntegerField()
+    quantity = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='uploads', blank=True, null=True)
     thumbnail = models.ImageField(upload_to='uploads', blank=True, null=True)
 
@@ -33,6 +32,3 @@ class Product(models.Model):
 
 class Cart(models.Model):
     items = models.ManyToManyField(Product)
-    ## products = ArrayField(models.CharField(max_length=255), default=[])
-    ## quantities = ArrayField(models.PositiveIntegerField(), default=[])
-    ## Add a cart on/off variable?

@@ -15,8 +15,6 @@
                                         <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">-</a>
                                         <div class="card-text ml-2 mr-2">{{product.quantity}}</div>
                                         <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</a>
-                                        <button v-on:click="updateQuantity(product.quantity, 'add')" class="cart__button">+</button>
-                                        <p class="card-text">{{product.quantity}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -36,16 +34,6 @@
             getImgUrl(imgName) {
                 return require('.' + imgName)
             },
-            updateQuantity(productQuantity, updateType) {
-                if (updateType === 'subtract') {
-                    if (productQuantity !==0) {
-                        productQuantity--;
-                    }
-                } else {
-                    productQuantity = parseInt(productQuantity) + 1;
-                    console.log(parseInt(productQuantity))
-                    }
-            }
         },
         name: 'Product',
         data () {
