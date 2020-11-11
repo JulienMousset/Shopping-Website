@@ -46,6 +46,7 @@
                     }
             }
         },
+        /* KEEP ?
         data1 () {
             return {
                 object: {
@@ -53,6 +54,7 @@
                 }
             }
         },
+        */
         name: 'Product',
         data () {
             return {
@@ -75,7 +77,6 @@
     }
 </script>
 
-<!--COMPONENT ONLY STYLING-->
 <style scoped>
 
 </style>

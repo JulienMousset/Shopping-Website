@@ -3,8 +3,6 @@ from io import BytesIO
 from django.core.files import File
 from PIL import Image
 
-# Create your models here.
-
 class Product(models.Model):
     name = models.CharField(max_length=255)
     price = models.CharField(max_length=10)
@@ -20,7 +18,6 @@ class Product(models.Model):
 
         super().save(*args, **kwargs)
     
-    ##Change size to 215 if it works
     def make_thumbnail(self, image, size=(300, 200)):
         img = Image.open(image)
         img.convert('RGB')

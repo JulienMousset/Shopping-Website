@@ -4,8 +4,6 @@ from rest_framework import generics
 from . models import Product, Cart
 from . serializers import ProductSerializer, CartSerializer
 
-# Create your views here.
-
 class ProductView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
 

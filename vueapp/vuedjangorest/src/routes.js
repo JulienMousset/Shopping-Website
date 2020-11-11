@@ -15,7 +15,7 @@ export default new VueRouter({
             component: Product
         },
         {
-            path: '/',
+            path: '/cart',
             name: 'cart',
             component: Cart
         }
