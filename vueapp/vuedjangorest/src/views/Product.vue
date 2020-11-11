@@ -16,6 +16,7 @@
                                         <div class="card-text ml-2 mr-2">{{product.quantity}}</div>
                                         <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</a>
                                         <button v-on:click="updateQuantity(product.quantity, 'add')" class="cart__button">+</button>
+                                        <p class="card-text">{{product.quantity}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -41,20 +42,11 @@
                         productQuantity--;
                     }
                 } else {
-                    console.log(parseInt(productQuantity))
                     productQuantity = parseInt(productQuantity) + 1;
+                    console.log(parseInt(productQuantity))
                     }
             }
         },
-        /* KEEP ?
-        data1 () {
-            return {
-                object: {
-                    image: 'image.png'
-                }
-            }
-        },
-        */
         name: 'Product',
         data () {
             return {
@@ -76,7 +68,3 @@
         }
     }
 </script>
-
-<style scoped>
-
-</style>
