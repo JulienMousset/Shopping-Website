@@ -3,8 +3,6 @@ import VueRouter from 'vue-router'
 import Product from './views/Product.vue'
 import Cart from './views/Cart.vue'
 
-//DO THE SAME FOR CART
-
 Vue.use(VueRouter)
 
 export default new VueRouter({

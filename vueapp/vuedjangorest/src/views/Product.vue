@@ -4,30 +4,25 @@
         <div class="album py-5 bg-light">
             <div class="container">
                 <div class="row">
-                <div v-for="product in APIData" :key="product.id" class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                    <!--
-                    <img class="card-img-top" src="">{{product.image}}
-                    <img :src="'/ressources/images/'+product.image">
-                    <img class="card-img-top" v-bind:src="product.image" alt="Card image cap">
-                    <img :src="product.image" />
-                    <img :src="'lbj.jpeg'" :alt='product.name'>
-                    <span>{{ product.image }}</span>
-                    <img v-bind:src="product.image">-->
-                    <div><img class="card-img-top" :src="getImgUrl(product.image)" v-bind:alt="product.image"></div>
-                    <div class="card-body">
-                        <h4 class=""><a class="text-secondary" href="">{{product.name}}</a></h4>
-                        <p class="card-text">{{product.price}}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                        <a href="" class="btn btn-sm btn-outline-primary" role="button" aria-pressed="true">-</a>
-                        <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</a>
-                        </div>
-                        <small class="text-muted">9 mins</small>
+                    <div v-for="product in APIData" :key="product.id" class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <div><img class="card-img-top" :src="getImgUrl(product.image)" v-bind:alt="product.image"></div>
+                            <div class="card-body">
+                                <h4 class=""><a class="text-secondary" href="">{{product.name}}</a></h4>
+                                <p class="card-text">{{product.price}}</p>
+                                <!--
+                                <div class="d-flex justify-content-between align-items-center">
+                                -->
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="btn-group">
+                                        <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">-</a>
+                                        <div class="card-text ml-2 mr-2">{{product.quantity}}</div>
+                                        <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -72,6 +67,7 @@
     }
 </script>
 
+<!--COMPONENT ONLY STYLING-->
 <style scoped>
 
 </style>
