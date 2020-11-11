@@ -10,14 +10,12 @@
                             <div class="card-body">
                                 <h4 class=""><a class="text-secondary" href="">{{product.name}}</a></h4>
                                 <p class="card-text">{{product.price}}</p>
-                                <!--
-                                <div class="d-flex justify-content-between align-items-center">
-                                -->
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="btn-group">
                                         <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">-</a>
                                         <div class="card-text ml-2 mr-2">{{product.quantity}}</div>
                                         <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</a>
+                                        <button v-on:click="updateQuantity(product.quantity, 'add')" class="cart__button">+</button>
                                     </div>
                                 </div>
                             </div>
@@ -36,6 +34,16 @@
         methods: {
             getImgUrl(imgName) {
                 return require('.' + imgName)
+            },
+            updateQuantity(productQuantity, updateType) {
+                if (updateType === 'subtract') {
+                    if (productQuantity !==0) {
+                        productQuantity--;
+                    }
+                } else {
+                    console.log(parseInt(productQuantity))
+                    productQuantity = parseInt(productQuantity) + 1;
+                    }
             }
         },
         data1 () {
