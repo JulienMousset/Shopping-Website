@@ -6,15 +6,15 @@
                 <div class="row">
                     <div v-for="product in APIData" :key="product.id" class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <div><img class="card-img-top" :src="getImgUrl(product.image)" v-bind:alt="product.image"></div>
+                            <div><img class="card-img-top" role="button" :src="getImgUrl(product.image)" v-bind:alt="product.image"></div>
                             <div class="card-body">
-                                <h4 class=""><a class="text-secondary" href="">{{product.name}}</a></h4>
+                                <h4 class=""><div class="text-secondary" role="button" href="">{{product.name}}</div></h4>
                                 <p class="card-text">{{product.price}}</p>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <div class="btn-group">
-                                        <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">-</a>
+                                        <div class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">-</div>
                                         <div class="card-text ml-2 mr-2">{{product.quantity}}</div>
-                                        <a href="" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</a>
+                                        <div class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">+</div>
                                     </div>
                                 </div>
                             </div>
