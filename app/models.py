@@ -1,7 +1,4 @@
 from django.db import models
-from io import BytesIO
-from django.core.files import File
-from PIL import Image
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
