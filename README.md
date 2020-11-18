@@ -38,3 +38,4 @@ I might implement the shopping cart and other features later.
 
 ## Screenshots
 
+![](screenshots/shopping-website1.png)
