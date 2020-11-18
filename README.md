@@ -1,22 +1,22 @@
 # Shopping-Website
 
-A simple shopping website template built with Vue.js and Django REST Framework.
+A simple shopping website template **built with Vue.js and Django REST Framework**.
 
 You can add, update and delete persistent items (each with a name, price, quantity and picture) via the Django admin website.
 
-Front-end and back-end communicate thanks to Axios that is consuming the REST API.
+Front-end and back-end communicate thanks to **Axios that is consuming the REST API**.
 
 I might implement the shopping cart and other features later.
 
-## Stack :
+## Stack
 
-front-end :
+**front-end :**
 - HTML
 - CSS (Bootstrap, Font Awesome)
 - JavaScript (Vue.js)
 - Axios
 
-back-end :
+**back-end :**
 - Django (Django REST Framework)
 
 ## Requirements
@@ -34,7 +34,7 @@ back-end :
 - Install required Node.js modules : `cd vueapp/vuedjangorest/` and `npm install`
 - Start the front-end server : `npm run serve`
 - Visit the website at this url : http://localhost:8080/
-- If you wish so, you can now add, update and delete items from the Django admin website and see the results in real time on the web page.
+- You can now add, update and delete items from the Django admin website and see the results in real time on the web page.
 
 ## Screenshots
 
