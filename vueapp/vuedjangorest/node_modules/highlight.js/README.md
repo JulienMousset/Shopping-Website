@@ -12,9 +12,9 @@
 [![code quality](https://badgen.net/lgtm/grade/g/highlightjs/highlight.js/js)](https://lgtm.com/projects/g/highlightjs/highlight.js/?mode=list)
 
 [![build and CI status](https://badgen.net/github/checks/highlightjs/highlight.js?label=build)](https://github.com/highlightjs/highlight.js/actions?query=workflow%3A%22Node.js+CI%22)
-[![open issues](https://badgen.net/github/open-issues/highlightjs/highlight.js?label=issues&labelColor=orange&color=c41)](https://github.com/highlightjs/highlight.js/issues)
-[![help welcome issues](https://badgen.net/github/label-issues/highlightjs/highlight.js/help%20welcome/open?labelColor=393&color=6c6)](https://github.com/highlightjs/highlight.js/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+welcome%22)
-[![beginner friendly issues](https://badgen.net/github/label-issues/highlightjs/highlight.js/beginner%20friendly/open?labelColor=669&color=99c)](https://github.com/highlightjs/highlight.js/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22)
+[![open issues](https://badgen.net/github/open-issues/highlightjs/highlight.js?label=issues)](https://github.com/highlightjs/highlight.js/issues)
+[![help welcome issues](https://badgen.net/github/label-issues/highlightjs/highlight.js/help%20welcome/open)](https://github.com/highlightjs/highlight.js/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+welcome%22)
+[![good first issue](https://badgen.net/github/label-issues/highlightjs/highlight.js/good%20first%20issue/open)](https://github.com/highlightjs/highlight.js/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22)
 [![vulnerabilities](https://badgen.net/snyk/highlightjs/highlight.js)](https://snyk.io/test/github/highlightjs/highlight.js?targetFile=package.json)
 
 <!-- [![Build CI](https://img.shields.io/github/workflow/status/highlightjs/highlight.js/Node.js%20CI)](https://github.com/highlightjs/highlight.js/actions?query=workflow%3A%22Node.js+CI%22) -->
@@ -49,7 +49,7 @@ library along with one of the styles and calling [`initHighlightingOnLoad`][1]:
 ```html
 <link rel="stylesheet" href="/path/to/styles/default.css">
 <script src="/path/to/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.highlightAll();</script>
 ```
 
 This will find and highlight code inside of `<pre><code>` tags; it tries
@@ -93,7 +93,7 @@ When you need a bit more control over the initialization of
 highlight.js, you can use the [`highlightBlock`][3] and [`configure`][4]
 functions. This allows you to better control *what* to highlight and *when*.
 
-Here’s the equivalent of calling [`initHighlightingOnLoad`][1] using
+Here’s the equivalent of calling [`highlightAll`][1] using
 only vanilla JS:
 
 ```js
@@ -271,28 +271,28 @@ see [DIGESTS.md](https://github.com/highlightjs/cdn-release/blob/master/DIGESTS.
 **cdnjs** ([link](https://cdnjs.com/libraries/highlight.js))
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/go.min.js"></script>
 ```
 
 **jsdelivr** ([link](https://www.jsdelivr.com/package/gh/highlightjs/cdn-release))
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/default.min.css">
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/styles/default.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/highlight.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/languages/go.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.6.0/build/languages/go.min.js"></script>
 ```
 
 **unpkg** ([link](https://unpkg.com/browse/@highlightjs/cdn-assets/))
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/styles/default.min.css">
-<script src="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@10.6.0/styles/default.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@10.6.0/highlight.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
-<script src="https://unpkg.com/@highlightjs/cdn-assets@10.5.0/languages/go.min.js"></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@10.6.0/languages/go.min.js"></script>
 ```
 
 **Note:** *The CDN-hosted `highlight.min.js` package doesn't bundle every language.* It would be
@@ -359,7 +359,7 @@ Further in-depth documentation for the API and other topics is at
 
 Authors and contributors are listed in the [AUTHORS.txt][8] file.
 
-[1]: http://highlightjs.readthedocs.io/en/latest/api.html#inithighlightingonload
+[1]: http://highlightjs.readthedocs.io/en/latest/api.html#highlightall
 [2]: http://highlightjs.readthedocs.io/en/latest/css-classes-reference.html
 [3]: http://highlightjs.readthedocs.io/en/latest/api.html#highlightblock-block
 [4]: http://highlightjs.readthedocs.io/en/latest/api.html#configure-options
